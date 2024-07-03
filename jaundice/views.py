@@ -57,3 +57,10 @@ def saveData(request):
     except Exception as err:
         return Response({"error": str(err)}, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET'])
+def ping(request):
+    try:
+        return Response("Jaundice app OK", status=status.HTTP_200_OK)
+
+    except Exception as err:
+        return Response({"error": str(err)}, status=status.HTTP_400_BAD_REQUEST)

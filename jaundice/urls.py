@@ -21,5 +21,6 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    re_path('', views.saveData),
+    re_path('newborn/', views.saveData),
+    re_path('ping/', views.ping),
 ]
