@@ -27,6 +27,7 @@ def saveData(request):
         jaundice = data.get('jaundice')
         bilirubin = data.get('bilirubin')
         foreheads = data.get('foreheads')
+        device = data.get('device')
 
         dateOfBirth = datetime.strptime(dateOfBirth, '%Y-%m-%d').date()
         timeOfBirth = datetime.strptime(timeOfBirth, '%H:%M').time()
@@ -40,7 +41,8 @@ def saveData(request):
             mSkinTone=mSkinTone,
             kramer=kramer,
             jaundice=jaundice,
-            bilirubin=bilirubin
+            bilirubin=bilirubin,
+            device=device
         )
 
         for f in foreheads:

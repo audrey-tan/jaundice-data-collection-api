@@ -17,6 +17,7 @@ class Newborn(models.Model):
     jaundice = models.BooleanField()
     bilirubin = models.FloatField()
     foreheads = models.ManyToManyField(ImageModel)
+    device = models.CharField(max_length=256)
 
 
 
